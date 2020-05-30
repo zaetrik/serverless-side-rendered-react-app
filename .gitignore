@@ -1,0 +1,18 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.dynamodb
+
+.build
+
+.DS_STORE
+
+dist
+
+s3_tmp
+
+frontend/public/

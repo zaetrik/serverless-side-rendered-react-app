@@ -1,0 +1,38 @@
+{
+  "name": "serverless-side-rendered-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "offline": "rm -r -f ./.build && rm -r -f s3_tmp && npm run build:ui && serverless offline start --stage dev",
+    "setup": "serverless dynamodb install",
+    "remove": "serverless remove --stage prod",
+    "build:ui": "cd frontend && npm run build",
+    "deploy": "npm run build:ui && serverless deploy --stage prod",
+    "invoke": "serverless invoke -f"
+  },
+  "author": "Cedomic",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.683.0",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.51",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "serverless": "^1.71.3",
+    "serverless-dynamodb-client": "0.0.2",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-http": "^2.5.0",
+    "serverless-offline": "^6.1.7",
+    "serverless-plugin-typescript": "^1.1.9",
+    "serverless-s3-local": "^0.6.1",
+    "serverless-s3-local-sync": "file:./serverless-s3-local-sync",
+    "serverless-s3-sync": "^1.14.3",
+    "typescript": "^3.9.3"
+  }
+}

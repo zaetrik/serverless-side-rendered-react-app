@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.177.0",
+    "glob": "^7.1.2",
+    "mime-types": "^2.1.17"
+  },
+  "description": "syncs a directory with a local s3 bucket",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "serverless-s3-local-sync",
+  "version": "0.0.1"
+}

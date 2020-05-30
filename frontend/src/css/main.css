@@ -1,0 +1,14 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+/* fallback for prefers-color-scheme */
+body {
+  background-color: #292a30;
+  color: white;
+}
+
+a {
+  color: white;
+}
